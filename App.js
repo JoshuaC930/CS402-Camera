@@ -26,6 +26,12 @@ const CameraApp = () => {
       }
   });
 
+  //function for flipping camera
+  const flipCamera = () => setType(
+    type === Camera.Constants.Type.back ?
+        Camera.Constants.Type.front : Camera.Constants.Type.back
+  )
+
   // if do not have permission to access camera show notice
   if (hasCameraPermission === null || hasCameraPermission === false) {
     var notice = <View><Text>No Access To Cameara</Text></View>;
@@ -33,7 +39,6 @@ const CameraApp = () => {
   }
 
     var cameraUi =
-
     <>
       <View style={styles.container}>
           
@@ -41,17 +46,17 @@ const CameraApp = () => {
               <Camera
                   ref={ref => {camRef.current = ref; }}
                   style={styles.camera}
+                  type={type}
               />
           </View>
       </View>
 
       <View style={styles.actionRow}>
         <View style={styles.buttonLayout}>
-          <Button title='Flip' onPress={() => console.log("Flip Pressed!")}/>
+          <Button title='Flip' onPress={flipCamera}/>
           <Button title='Snap' onPress={() => console.log("Snap Pressed!")}/>
           <Button title='Gallery' onPress={() => console.log("Gallery Pressed!")}/>
         </View>
-            
       </View>
     </>
         

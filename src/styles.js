@@ -15,7 +15,7 @@ export const styles = StyleSheet.create ({
         aspectRatio: 3 / 4,
     },
     actionRow: {
-        backgroundColor: 'rgba(255, 255, 255, 0.90)',
+        backgroundColor: 'rgba(255, 255, 255, 0.60)',
         height: Dimensions.get('screen').height * 0.15,
         width: Dimensions.get('screen').width,
         borderTopLeftRadius: 25,
