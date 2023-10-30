@@ -15,8 +15,8 @@ export const styles = StyleSheet.create ({
         aspectRatio: 3 / 4,
     },
     actionRow: {
-        backgroundColor: 'rgba(255, 255, 255, 0.60)',
-        height: Dimensions.get('screen').height * 0.15,
+        backgroundColor: 'rgba(255, 255, 255, 0.65)',
+        height: Dimensions.get('screen').height * 0.10,
         width: Dimensions.get('screen').width,
         borderTopLeftRadius: 25,
         borderTopRightRadius: 25,
@@ -24,7 +24,7 @@ export const styles = StyleSheet.create ({
         bottom: 0,
     },
     buttonLayout: {
-        paddingTop: 45,
+        paddingTop: 24,
         flexDirection: 'row',
         justifyContent: 'space-evenly',
     },
